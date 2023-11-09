@@ -1,1 +1,161 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/logo192.png"/><link rel="manifest" href="/manifest.json"/><title>React App</title><script defer="defer" src="/static/js/main.dd6403e0.js"></script><link href="/static/css/main.27e8b707.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테린초 커밍쑨</title>
+  <!-- <link href="./css/common.css" rel="stylesheet" type="text/css" /> -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="wrap">
+  <div class="text text-0" title="테린초컵 2회차">테린초컵 2회차</div>
+  <div class="text text-1" title="대회 신청해주세요!">대회 신청해주세요!</div>
+  <div class="text text-2" title="신청은 맹반장님께">신청은 맹반장님께</div>
+  <div class="text text-3" title="이글을 보고 신청..">이걸 보고 꼭 신청을..</div>
+  <div class="text text-4" title="안하시면!!!">안하시면!!! 아주아주</div>
+  <div class="text text-5" title="오늘부터 공이 안보이실꺼에요!">오늘부터 공이 안보이실꺼에요!</div>
+  <div class="text text-6" title="농담인거 아시죠? ㅎ">농담인거 아시죠? ㅎ</div>
+  <div class="text text-7" title="테린초 대회 많.관.부">테린초 대회 많.관.부</div>
+
+  <script>
+    $(document).ready(function () {
+      // $('div.text').hide();
+      $('div.text-0').fadeIn();
+      var wrap = $('.wrap > div').length;
+
+      var count = 0;
+      playAlert = setInterval(function () {
+        
+        if( count <= 7 ){
+          ++count;
+          var minCount = count - 1;
+          $('div.text-' + count ).fadeIn();
+          $('div.text-' + minCount ).fadeOut();
+        }
+
+      }, 4500);
+      
+     
+      
+    })
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+    div.text {
+      flex-wrap: wrap;
+      display: none;
+    }
+
+    /* div.text {
+      transition: all ease-in-out 1s;
+      opacity: 0;
+    } */
+
+   
+
+    body {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      background: #131313;
+      color: #fff;
+      font-size: 40px;
+      font-family: 'Fira Mono', monospace;
+      letter-spacing: -7px;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    @media (max-width:768px) {
+      body {
+        font-size: 8vw;
+      }
+    }
+
+
+    div {
+      animation: glitch 1s linear infinite;
+    }
+
+    @keyframes glitch {
+
+      2%,
+      64% {
+        transform: translate(2px, 0) skew(0deg);
+      }
+
+      4%,
+      60% {
+        transform: translate(-2px, 0) skew(0deg);
+      }
+
+      62% {
+        transform: translate(0, 0) skew(5deg);
+      }
+    }
+
+    div:before,
+    div:after {
+      content: attr(title);
+      position: absolute;
+      left: 0;
+    }
+
+    div:before {
+      animation: glitchTop 1s linear infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+
+    @keyframes glitchTop {
+
+      2%,
+      64% {
+        transform: translate(2px, -2px);
+      }
+
+      4%,
+      60% {
+        transform: translate(-2px, 2px);
+      }
+
+      62% {
+        transform: translate(13px, -1px) skew(-13deg);
+      }
+    }
+
+    div:after {
+      animation: glitchBotom 1.5s linear infinite;
+      clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+      -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+
+    @keyframes glitchBotom {
+
+      2%,
+      64% {
+        transform: translate(-2px, 0);
+      }
+
+      4%,
+      60% {
+        transform: translate(-2px, 0);
+      }
+
+      62% {
+        transform: translate(-22px, 5px) skew(21deg);
+      }
+    }
+  </style>
+
+</body>
+
+</html>
