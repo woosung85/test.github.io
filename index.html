@@ -29,11 +29,15 @@
       var count = 0;
       playAlert = setInterval(function () {
         
-        if( count < 7 ){
+        if( count =< 7 ){
           ++count;
           var minCount = count - 1;
           $('div.text-' + count ).fadeIn();
           $('div.text-' + minCount ).fadeOut();
+          
+          if( count == 7)
+          $('div.text-' + count ).show();
+
         }
 
       }, 4500);
