@@ -11,14 +11,16 @@
 </head>
 
 <body class="wrap">
-  <div class="text text-0" title="테린초컵 2회차">테린초컵 2회차</div>
-  <div class="text text-1" title="대회 신청해주세요!">대회 신청해주세요!</div>
-  <div class="text text-2" title="신청은 맹반장님께">신청은 맹반장님께</div>
-  <div class="text text-3" title="이걸 보고 꼭 신청을..">이걸 보고 꼭 신청을..</div>
-  <div class="text text-4" title="안하시면!!! 아주아주">안하시면!!! 아주아주</div>
-  <div class="text text-5" title="이제! 공이 안보이실꺼에요!">이제! 공이 안보이실꺼에요!</div>
-  <div class="text text-6" title="농담인거 아시죠? ㅎ">농담인거 아시죠? ㅎ</div>
-  <div class="text text-7" title="테린초 대회 많.관.부">테린초 대회 많.관.부</div>
+  <section class="font-w">
+    <div class="text text-0" title="테린초컵 2회차">테린초컵 2회차</div>
+    <div class="text text-1" title="대회 신청해주세요!">대회 신청해주세요!</div>
+    <div class="text text-2" title="신청은 맹반장님께">신청은 맹반장님께</div>
+    <div class="text text-3" title="이걸 보고 꼭 신청을..">이걸 보고 꼭 신청을..</div>
+    <div class="text text-4" title="안하시면!!! 아주아주">안하시면!!! 아주아주</div>
+    <div class="text text-5" title="이제! 공이 안보이실꺼에요!">이제! 공이 안보이실꺼에요!</div>
+    <div class="text text-6" title="농담인거 아시죠? ㅎ">농담인거 아시죠? ㅎ</div>
+    <div class="text text-7" title="테린초 대회 많.관.부">테린초 대회 많.관.부</div>
+  </section>
 
   <script>
     $(document).ready(function () {
@@ -63,12 +65,18 @@
    
 
     body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      background: #131313;
+    }
+    .font-w {
       display: flex;
       width: 100vw;
       height: 100vh;
       align-items: center;
       justify-content: center;
-      margin: 0;
+      margin: 0 auto;
       background: #131313;
       color: #fff;
       font-size: 40px;
@@ -77,6 +85,7 @@
       flex-wrap: wrap;
       align-content: center;
       overflow: hidden;
+      max-width: 500px;
     }
 
     @media (max-width:768px) {
